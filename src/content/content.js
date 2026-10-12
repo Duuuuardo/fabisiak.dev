@@ -20,7 +20,7 @@ export const content = {
         { label: "idiomas", value: "Português (nativo), Inglês (profissional)" },
       ],
       links: [
-        { label: "github", value: "github.com/duuuuardo", url: "https://github.com/Duuuuardo" },
+        { label: "github", value: "github.com/fabisiakeduardo", url: "https://github.com/fabisiakeduardo" },
         { label: "linkedin", value: "/in/eduardofabisiak", url: "https://www.linkedin.com/in/eduardofabisiak" },
         { label: "email", value: "eduardofabisiak@proton.me", url: "mailto:eduardofabisiak@proton.me" },
       ],
@@ -38,8 +38,8 @@ export const content = {
           description:
             "Plataforma multitenant de campanhas em massa no WhatsApp e Telegram, com 98%+ de entregabilidade, ritmo de envio, webhooks, retry e acompanhamento em tempo real. Rodou em produção atendendo clientes reais e hoje é open source.",
           stack: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Docker"],
-          link: "https://github.com/Duuuuardo/Naia",
-          linkLabel: "github.com/Duuuuardo/Naia",
+          link: "https://github.com/fabisiakeduardo/Naia",
+          linkLabel: "github.com/fabisiakeduardo/Naia",
           motif: "broadcast",
         },
         {
@@ -48,8 +48,8 @@ export const content = {
           description:
             "Hub de conta, identidade e cobrança da empresa que estou fundando: provedor OIDC próprio com OAuth2 e 2FA, RBAC multi-workspace e assinaturas Stripe. Todo produto novo já nasce sobre essa base. Rodou em produção e hoje é open source.",
           stack: ["Bun", "TypeScript", "Elysia", "Stripe", "PostgreSQL", "OIDC"],
-          link: "https://github.com/Duuuuardo/Vianova",
-          linkLabel: "github.com/Duuuuardo/Vianova",
+          link: "https://github.com/fabisiakeduardo/Vianova",
+          linkLabel: "github.com/fabisiakeduardo/Vianova",
           motif: "orbit",
         },
         {
@@ -68,8 +68,8 @@ export const content = {
           description:
             "App Rails que gera currículos sob medida para cada vaga: extrai keywords da descrição, pontua o match e reescreve resumo e bullets. Assistente de chat, importação de PDF do LinkedIn e IA multi-provider (Ollama, OpenAI, Anthropic, Gemini).",
           stack: ["Rails 8", "SQLite", "Hotwire", "Stimulus", "LLM"],
-          link: "https://github.com/Duuuuardo/curriculos",
-          linkLabel: "github.com/Duuuuardo/curriculos",
+          link: "https://github.com/fabisiakeduardo/curriculos",
+          linkLabel: "github.com/fabisiakeduardo/curriculos",
           motif: "flux",
         },
       ],
@@ -82,35 +82,35 @@ export const content = {
             description:
               "Compartilhamento anônimo de arquivos, sem conta, com edição colaborativa de texto e código no navegador, histórico de versões e diff.",
             stack: ["Laravel", "Reverb", "Monaco", "SQLite"],
-            link: "https://github.com/Duuuuardo/anondrop",
+            link: "https://github.com/fabisiakeduardo/anondrop",
           },
           {
             name: "BananaGit",
             description:
               "GUI de Git pra desktop que troca os comandos por ações em português claro: status, branches, stash e diff colorido, sem abrir terminal.",
             stack: ["Kotlin", "Compose Desktop", "JGit"],
-            link: "https://github.com/Duuuuardo/bananagit",
+            link: "https://github.com/fabisiakeduardo/bananagit",
           },
           {
             name: "Singr",
             description:
               "Bot de música self-hosted pro Discord, tocando áudio do YouTube e outras fontes nos canais de voz por slash commands.",
             stack: ["Java", "JDA", "LavaPlayer"],
-            link: "https://github.com/Duuuuardo/Singr",
+            link: "https://github.com/fabisiakeduardo/Singr",
           },
           {
             name: "CDN",
             description:
               "Backend de CDN mínimo: recebe, armazena e serve imagens e vídeos por API JSON, com chave de API e limites configuráveis.",
             stack: ["Laravel", "PHP"],
-            link: "https://github.com/Duuuuardo/CDN",
+            link: "https://github.com/fabisiakeduardo/CDN",
           },
           {
             name: "url-shortener",
             description:
               "Encurtador de URL direto ao ponto: cola uma URL, gera um link curto.",
             stack: ["Laravel", "SQLite", "Tailwind CSS"],
-            link: "https://github.com/Duuuuardo/url-shortener",
+            link: "https://github.com/fabisiakeduardo/url-shortener",
           },
         ],
       },
@@ -241,7 +241,7 @@ export const content = {
       note: "Aberto a oportunidades remotas ou com relocation como backend ou full-stack engineer.",
       email: "eduardofabisiak@proton.me",
       socials: [
-        { label: "GitHub", url: "https://github.com/Duuuuardo" },
+        { label: "GitHub", url: "https://github.com/fabisiakeduardo" },
         { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardofabisiak" },
       ],
       copyright: '$ echo "© 2026 Eduardo Fabisiak"',
@@ -268,7 +268,7 @@ export const content = {
         { label: "languages", value: "Portuguese (native), English (professional)" },
       ],
       links: [
-        { label: "github", value: "github.com/duuuuardo", url: "https://github.com/Duuuuardo" },
+        { label: "github", value: "github.com/fabisiakeduardo", url: "https://github.com/fabisiakeduardo" },
         { label: "linkedin", value: "/in/eduardofabisiak", url: "https://www.linkedin.com/in/eduardofabisiak" },
         { label: "email", value: "eduardofabisiak@proton.me", url: "mailto:eduardofabisiak@proton.me" },
       ],
@@ -285,8 +285,8 @@ export const content = {
           description:
             "Multitenant bulk campaign platform for WhatsApp and Telegram, with 98%+ delivery rate, send pacing, webhooks, retries and real-time tracking. Ran in production serving real customers and is now open source.",
           stack: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Docker"],
-          link: "https://github.com/Duuuuardo/Naia",
-          linkLabel: "github.com/Duuuuardo/Naia",
+          link: "https://github.com/fabisiakeduardo/Naia",
+          linkLabel: "github.com/fabisiakeduardo/Naia",
           motif: "broadcast",
         },
         {
@@ -295,8 +295,8 @@ export const content = {
           description:
             "Account, identity and billing hub for the company I'm founding: own OIDC provider with OAuth2 and 2FA, multi-workspace RBAC and Stripe subscriptions. Every new product starts on top of this base. Ran in production and is now open source.",
           stack: ["Bun", "TypeScript", "Elysia", "Stripe", "PostgreSQL", "OIDC"],
-          link: "https://github.com/Duuuuardo/Vianova",
-          linkLabel: "github.com/Duuuuardo/Vianova",
+          link: "https://github.com/fabisiakeduardo/Vianova",
+          linkLabel: "github.com/fabisiakeduardo/Vianova",
           motif: "orbit",
         },
         {
@@ -315,8 +315,8 @@ export const content = {
           description:
             "Rails app that generates resumes tailored to each job posting: extracts keywords from the description, scores the match and rewrites summary and bullets. Chat assistant, LinkedIn PDF import and multi-provider AI (Ollama, OpenAI, Anthropic, Gemini).",
           stack: ["Rails 8", "SQLite", "Hotwire", "Stimulus", "LLM"],
-          link: "https://github.com/Duuuuardo/curriculos",
-          linkLabel: "github.com/Duuuuardo/curriculos",
+          link: "https://github.com/fabisiakeduardo/curriculos",
+          linkLabel: "github.com/fabisiakeduardo/curriculos",
           motif: "flux",
         },
       ],
@@ -329,35 +329,35 @@ export const content = {
             description:
               "Anonymous file sharing with no account, plus real-time collaborative text and code editing in the browser, version history and diffs.",
             stack: ["Laravel", "Reverb", "Monaco", "SQLite"],
-            link: "https://github.com/Duuuuardo/anondrop",
+            link: "https://github.com/fabisiakeduardo/anondrop",
           },
           {
             name: "BananaGit",
             description:
               "A desktop Git GUI that swaps commands for plain-language actions: status, branches, stash and colored diff, no terminal needed.",
             stack: ["Kotlin", "Compose Desktop", "JGit"],
-            link: "https://github.com/Duuuuardo/bananagit",
+            link: "https://github.com/fabisiakeduardo/bananagit",
           },
           {
             name: "Singr",
             description:
               "Self-hosted Discord music bot, streaming audio from YouTube and other sources into voice channels via slash commands.",
             stack: ["Java", "JDA", "LavaPlayer"],
-            link: "https://github.com/Duuuuardo/Singr",
+            link: "https://github.com/fabisiakeduardo/Singr",
           },
           {
             name: "CDN",
             description:
               "Minimal CDN backend: receives, stores and serves images and videos over a JSON API, with API key auth and configurable limits.",
             stack: ["Laravel", "PHP"],
-            link: "https://github.com/Duuuuardo/CDN",
+            link: "https://github.com/fabisiakeduardo/CDN",
           },
           {
             name: "url-shortener",
             description:
               "Straight-to-the-point URL shortener: paste a URL, get a short link.",
             stack: ["Laravel", "SQLite", "Tailwind CSS"],
-            link: "https://github.com/Duuuuardo/url-shortener",
+            link: "https://github.com/fabisiakeduardo/url-shortener",
           },
         ],
       },
@@ -488,7 +488,7 @@ export const content = {
       note: "Open to remote or relocation opportunities as a backend or full-stack engineer.",
       email: "eduardofabisiak@proton.me",
       socials: [
-        { label: "GitHub", url: "https://github.com/Duuuuardo" },
+        { label: "GitHub", url: "https://github.com/fabisiakeduardo" },
         { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardofabisiak" },
       ],
       copyright: '$ echo "© 2026 Eduardo Fabisiak"',

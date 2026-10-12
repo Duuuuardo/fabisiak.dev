@@ -67,7 +67,7 @@ export default function Nav() {
             ))}
           </div>
           <a
-            href="https://github.com/Duuuuardo"
+            href="https://github.com/fabisiakeduardo"
             target="_blank"
             rel="noreferrer"
             className="hidden text-dim transition-colors duration-300 hover:text-ink sm:block"

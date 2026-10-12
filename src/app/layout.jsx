@@ -30,11 +30,11 @@ export const metadata = {
     title: "Eduardo Fabisiak · Software Engineer",
     description:
       "Software engineer backend e full-stack: APIs, microservices, mensageria, pagamentos e sistemas distribuídos rodando em produção.",
-    images: [{ url: "https://github.com/Duuuuardo.png", width: 460, height: 460 }],
+    images: [{ url: "https://github.com/fabisiakeduardo.png", width: 460, height: 460 }],
   },
   twitter: {
     card: "summary",
-    creator: "@Duuuuardo",
+    creator: "@fabisiakeduardo",
     title: "Eduardo Fabisiak · Software Engineer",
     description:
       "Software engineer backend e full-stack: APIs, microservices, mensageria, pagamentos e sistemas distribuídos rodando em produção.",
