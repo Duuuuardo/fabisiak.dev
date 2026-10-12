@@ -234,7 +234,7 @@ export const content = {
     },
     footer: {
       heading: "Vamos construir algo?",
-      note: "Aberto a oportunidades remotas como backend ou full-stack engineer.",
+      note: "Aberto a oportunidades remotas ou com relocation como backend ou full-stack engineer.",
       email: "eduardofabisiak@proton.me",
       socials: [
         { label: "GitHub", url: "https://github.com/Duuuuardo" },
@@ -477,7 +477,7 @@ export const content = {
     },
     footer: {
       heading: "Let's build something?",
-      note: "Open to remote opportunities as a backend or full-stack engineer.",
+      note: "Open to remote or relocation opportunities as a backend or full-stack engineer.",
       email: "eduardofabisiak@proton.me",
       socials: [
         { label: "GitHub", url: "https://github.com/Duuuuardo" },
