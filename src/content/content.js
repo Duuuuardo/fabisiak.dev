@@ -207,7 +207,7 @@ export const content = {
         },
         {
           name: "IA",
-          items: ["Claude Code", "Devin", "Prompt Engineering", "OpenDesign"],
+          items: ["Claude Code", "Devin IDE", "Prompt Engineering", "OpenDesign"],
         },
         {
           name: "Infra & DevOps",
@@ -454,7 +454,7 @@ export const content = {
         },
         {
           name: "AI",
-          items: ["Claude Code", "Devin", "Prompt Engineering", "OpenDesign"],
+          items: ["Claude Code", "Devin IDE", "Prompt Engineering", "OpenDesign"],
         },
         {
           name: "Infra & DevOps",
