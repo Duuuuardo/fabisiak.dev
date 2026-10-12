@@ -50,3 +50,38 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   }
 }
+
+@layer components {
+  .post-content {
+    @apply text-lg leading-relaxed text-mist;
+  }
+
+  .post-content p {
+    @apply mb-6;
+  }
+
+  .post-content h2 {
+    @apply mb-4 mt-12 text-2xl font-medium tracking-tight text-ink;
+  }
+
+  .post-content strong {
+    @apply font-medium text-ink;
+  }
+
+  .post-content ul {
+    @apply mb-6 space-y-2;
+  }
+
+  .post-content li {
+    @apply flex gap-3;
+  }
+
+  .post-content li::before {
+    content: "↳";
+    @apply font-mono text-accent;
+  }
+
+  .post-content a {
+    @apply text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent;
+  }
+}

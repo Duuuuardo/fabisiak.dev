@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { useLang } from "./LangProvider";
 
 const links = [
-  ["projects", "#projects"],
-  ["experience", "#experience"],
-  ["stack", "#stack"],
-  ["about", "#about"],
-  ["contact", "#contact"],
+  ["projects", "/#projects"],
+  ["experience", "/#experience"],
+  ["stack", "/#stack"],
+  ["about", "/#about"],
+  ["blog", "/blog"],
+  ["contact", "/#contact"],
 ];
 
 export default function Nav() {
@@ -40,7 +41,7 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="#top" className="font-mono text-sm font-medium tracking-tight">
+        <a href="/" className="font-mono text-sm font-medium tracking-tight">
           fabisiak.dev
         </a>
 

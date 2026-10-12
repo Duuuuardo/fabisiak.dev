@@ -1,5 +1,7 @@
 import Site from "@/components/Site";
+import { getAllPosts } from "@/lib/posts";
 
 export default function Home() {
-  return <Site />;
+  const posts = getAllPosts();
+  return <Site posts={posts} />;
 }

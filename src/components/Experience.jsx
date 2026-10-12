@@ -41,6 +41,27 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-6 flex flex-wrap items-center gap-2">
+                    {job.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-line px-3 py-1 font-mono text-[11px] text-mist"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                    {job.links.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-accent/30 px-3 py-1 font-mono text-[11px] text-accent transition-colors duration-200 hover:border-accent hover:bg-accent/5"
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </article>
             </Reveal>

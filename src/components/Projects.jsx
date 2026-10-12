@@ -98,6 +98,48 @@ export default function Projects() {
             />
           ))}
         </div>
+
+        <Reveal className="mt-28 md:mt-36">
+          <h3 className="text-3xl font-medium tracking-tighter text-ink md:text-5xl">
+            {t.projects.oss.heading}
+          </h3>
+          <p className="mt-4 max-w-[56ch] leading-relaxed text-mist">
+            {t.projects.oss.intro}
+          </p>
+        </Reveal>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {t.projects.oss.items.map((item, i) => (
+            <Reveal key={item.name} delay={i * 0.05} className={i === 0 ? "lg:col-span-2" : ""}>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex h-full flex-col justify-between gap-8 rounded-2xl border border-line bg-paper-2 p-7 transition-colors duration-200 hover:border-accent/50"
+              >
+                <div>
+                  <h4 className="text-xl font-medium tracking-tight text-ink group-hover:text-accent">
+                    {item.name}
+                  </h4>
+                  <p className="mt-3 leading-relaxed text-mist">{item.description}</p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {item.stack.map((tech) => (
+                      <li
+                        key={tech}
+                        className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[10.5px] text-mist"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <span className="font-mono text-xs text-accent">
+                  {item.link.replace("https://", "")} ↗
+                </span>
+              </a>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
