@@ -45,14 +45,14 @@ export default function Nav() {
           fabisiak.dev
         </a>
 
-        <ul className="hidden items-center gap-7 text-sm md:flex">
+        <ul className="hidden items-center gap-6 font-mono text-xs md:flex">
           {links.map(([key, href]) => (
             <li key={key}>
               <a
                 href={href}
-                className="opacity-70 transition-opacity duration-200 hover:opacity-100"
+                className="opacity-60 transition-opacity duration-200 hover:opacity-100"
               >
-                {t.nav[key]}
+                ~/{t.nav[key].toLowerCase()}
               </a>
             </li>
           ))}
@@ -77,13 +77,13 @@ export default function Nav() {
             href="https://github.com/Duuuuardo"
             target="_blank"
             rel="noreferrer"
-            className={`hidden rounded-full border px-4 py-1.5 text-sm transition-colors duration-200 sm:block ${
+            className={`hidden rounded-full border px-4 py-1.5 font-mono text-xs transition-colors duration-200 sm:block ${
               onDark
                 ? "border-white/25 hover:border-white/60"
                 : "border-ink/25 hover:border-ink/60"
             }`}
           >
-            GitHub ↗
+            ↖ GitHub
           </a>
         </div>
       </nav>

@@ -9,10 +9,22 @@ export const content = {
       contact: "Contato",
     },
     hero: {
-      eyebrow: "EDUARDO FABISIAK · ENGENHARIA DE SOFTWARE",
-      title: "Software que sobrevive à produção.",
-      subtitle:
-        "Há mais de 4 anos construo APIs, filas, pagamentos e sistemas distribuídos que clientes usam todos os dias.",
+      command: "$ whoami",
+      name: "Eduardo Fabisiak",
+      role: "engenheiro de software backend e full-stack, do Rio Grande do Sul, Brasil.",
+      windowTitle: "eduardo@fabisiak.dev - zsh",
+      facts: [
+        { label: "cargo", value: "Engenheiro de Software Backend" },
+        { label: "local", value: "Itatiba do Sul, RS" },
+        { label: "fuso", value: "America/Sao_Paulo" },
+        { label: "experiência", value: "4 anos" },
+        { label: "idiomas", value: "Português (nativo), Inglês (profissional)" },
+      ],
+      links: [
+        { label: "github", value: "github.com/duuuuardo", url: "https://github.com/Duuuuardo" },
+        { label: "linkedin", value: "/in/eduardofabisiak", url: "https://www.linkedin.com/in/eduardofabisiak" },
+        { label: "email", value: "eduardofabisiak@proton.me", url: "mailto:eduardofabisiak@proton.me" },
+      ],
       ctaPrimary: "Ver projetos",
       ctaSecondary: "Falar comigo",
     },
@@ -212,7 +224,7 @@ export const content = {
         { label: "GitHub", url: "https://github.com/Duuuuardo" },
         { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardofabisiak" },
       ],
-      copyright: "© 2026 Eduardo Fabisiak",
+      copyright: '$ echo "© 2026 Eduardo Fabisiak"',
     },
   },
   en: {
@@ -225,10 +237,22 @@ export const content = {
       contact: "Contact",
     },
     hero: {
-      eyebrow: "EDUARDO FABISIAK · SOFTWARE ENGINEERING",
-      title: "Software built to survive production.",
-      subtitle:
-        "For 4+ years I have been building APIs, queues, payments and distributed systems that customers use every day.",
+      command: "$ whoami",
+      name: "Eduardo Fabisiak",
+      role: "backend and full-stack software engineer, from Rio Grande do Sul, Brazil.",
+      windowTitle: "eduardo@fabisiak.dev - zsh",
+      facts: [
+        { label: "role", value: "Backend Software Engineer" },
+        { label: "location", value: "Itatiba do Sul, RS" },
+        { label: "timezone", value: "America/Sao_Paulo" },
+        { label: "experience", value: "4 years" },
+        { label: "languages", value: "Portuguese (native), English (professional)" },
+      ],
+      links: [
+        { label: "github", value: "github.com/duuuuardo", url: "https://github.com/Duuuuardo" },
+        { label: "linkedin", value: "/in/eduardofabisiak", url: "https://www.linkedin.com/in/eduardofabisiak" },
+        { label: "email", value: "eduardofabisiak@proton.me", url: "mailto:eduardofabisiak@proton.me" },
+      ],
       ctaPrimary: "View projects",
       ctaSecondary: "Get in touch",
     },
@@ -427,7 +451,7 @@ export const content = {
         { label: "GitHub", url: "https://github.com/Duuuuardo" },
         { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardofabisiak" },
       ],
-      copyright: "© 2026 Eduardo Fabisiak",
+      copyright: '$ echo "© 2026 Eduardo Fabisiak"',
     },
   },
 };

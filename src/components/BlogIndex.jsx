@@ -9,6 +9,7 @@ export default function BlogIndex({ posts }) {
     <div data-nav-theme="light" className="bg-paper px-6 pb-28 pt-32 md:px-10 md:pt-40">
       <div className="mx-auto max-w-[1400px]">
         <h1 className="text-5xl font-medium tracking-tighter text-ink md:text-7xl">
+          <span className="mr-3 font-mono text-accent" aria-hidden="true">&gt;</span>
           {t.blog.heading}
         </h1>
         <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-mist">

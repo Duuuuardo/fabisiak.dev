@@ -11,6 +11,7 @@ export default function StackSection() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal>
           <h2 className="text-5xl font-medium tracking-tighter md:text-7xl">
+            <span className="mr-3 font-mono text-accent-bright" aria-hidden="true">&gt;</span>
             {t.stack.heading}
           </h2>
         </Reveal>

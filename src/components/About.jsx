@@ -11,6 +11,7 @@ export default function About() {
       <div className="mx-auto grid max-w-[1400px] gap-14 px-6 md:grid-cols-12 md:px-10">
         <Reveal className="md:col-span-7">
           <h2 className="text-5xl font-medium tracking-tighter text-ink md:text-7xl">
+            <span className="mr-3 font-mono text-accent" aria-hidden="true">&gt;</span>
             {t.about.heading}
           </h2>
           <p className="mt-8 max-w-[62ch] text-xl leading-relaxed text-mist">

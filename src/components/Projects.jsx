@@ -80,6 +80,7 @@ export default function Projects() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal>
           <h2 className="text-5xl font-medium tracking-tighter text-ink md:text-7xl">
+            <span className="mr-3 font-mono text-accent" aria-hidden="true">&gt;</span>
             {t.projects.heading}
           </h2>
           <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-mist">
@@ -101,6 +102,7 @@ export default function Projects() {
 
         <Reveal className="mt-28 md:mt-36">
           <h3 className="text-3xl font-medium tracking-tighter text-ink md:text-5xl">
+            <span className="mr-3 font-mono text-accent" aria-hidden="true">&gt;</span>
             {t.projects.oss.heading}
           </h3>
           <p className="mt-4 max-w-[56ch] leading-relaxed text-mist">
