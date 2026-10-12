@@ -4,86 +4,75 @@ import { useEffect, useState } from "react";
 import { useLang } from "./LangProvider";
 
 const links = [
-  ["projects", "/#projects"],
-  ["experience", "/#experience"],
-  ["stack", "/#stack"],
   ["about", "/#about"],
+  ["stack", "/#stack"],
+  ["experience", "/#experience"],
+  ["projects", "/#projects"],
   ["blog", "/blog"],
   ["contact", "/#contact"],
 ];
 
 export default function Nav() {
   const { lang, setLang, t } = useLang();
-  const [onDark, setOnDark] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("[data-nav-theme]");
-    const visible = new Map();
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) visible.set(entry.target, entry.target.dataset.navTheme);
-          else visible.delete(entry.target);
-        }
-        const themes = [...visible.values()];
-        setOnDark(themes.length ? themes[0] === "dark" : true);
-      },
-      { rootMargin: "-64px 0px -70% 0px" }
-    );
-    sections.forEach((s) => io.observe(s));
-    return () => io.disconnect();
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        onDark ? "text-white" : "text-ink"
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-[border-color,background-color,backdrop-filter] duration-500 ${
+        scrolled
+          ? "border-line bg-void/70 backdrop-blur-md"
+          : "border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="/" className="font-mono text-sm font-medium tracking-tight">
-          fabisiak.dev
+      <nav className="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-6 md:px-10">
+        <a href="/" className="font-mono text-[13px] text-ink">
+          <span className="text-accent">~</span>/fabisiak.dev
         </a>
 
-        <ul className="hidden items-center gap-6 font-mono text-xs md:flex">
+        <ul className="hidden items-center gap-7 font-mono text-[12px] md:flex">
           {links.map(([key, href]) => (
             <li key={key}>
               <a
                 href={href}
-                className="opacity-60 transition-opacity duration-200 hover:opacity-100"
+                className="text-dim transition-colors duration-300 hover:text-ink"
               >
-                ~/{t.nav[key].toLowerCase()}
+                {t.nav[key].toLowerCase()}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="flex items-center gap-5">
-          <div className="font-mono text-xs" role="group" aria-label="Language">
-            {["pt", "en"].map((l) => (
-              <button
-                key={l}
-                onClick={() => setLang(l)}
-                aria-pressed={lang === l}
-                className={`px-1 uppercase transition-opacity ${
-                  lang === l ? "font-medium" : "opacity-40 hover:opacity-80"
-                }`}
-              >
-                {l}
-              </button>
+        <div className="flex items-center gap-6 font-mono text-[12px]">
+          <div className="flex items-center gap-0.5" role="group" aria-label="Language">
+            {["pt", "en"].map((l, i) => (
+              <span key={l} className="flex items-center">
+                {i > 0 && <span className="px-1 text-faint" aria-hidden="true">/</span>}
+                <button
+                  onClick={() => setLang(l)}
+                  aria-pressed={lang === l}
+                  className={`uppercase transition-colors duration-300 ${
+                    lang === l ? "text-ink" : "text-dim hover:text-ink"
+                  }`}
+                >
+                  {l}
+                </button>
+              </span>
             ))}
           </div>
           <a
             href="https://github.com/Duuuuardo"
             target="_blank"
             rel="noreferrer"
-            className={`hidden rounded-full border px-4 py-1.5 font-mono text-xs transition-colors duration-200 sm:block ${
-              onDark
-                ? "border-white/25 hover:border-white/60"
-                : "border-ink/25 hover:border-ink/60"
-            }`}
+            className="hidden text-dim transition-colors duration-300 hover:text-ink sm:block"
           >
-            ↖ GitHub
+            github
           </a>
         </div>
       </nav>

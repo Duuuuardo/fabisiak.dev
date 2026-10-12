@@ -1,6 +1,7 @@
 "use client";
 
 import { LangProvider } from "./LangProvider";
+import Starfield from "./Starfield";
 import Nav from "./Nav";
 import Hero from "./Hero";
 import Projects from "./Projects";
@@ -13,13 +14,14 @@ import Footer from "./Footer";
 export default function Site({ posts }) {
   return (
     <LangProvider>
+      <Starfield />
       <Nav />
       <main>
         <Hero />
-        <Projects />
-        <Experience />
-        <StackSection />
         <About />
+        <StackSection />
+        <Experience />
+        <Projects />
         <BlogSection posts={posts} />
       </main>
       <Footer />

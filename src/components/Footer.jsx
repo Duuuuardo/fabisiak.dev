@@ -2,55 +2,65 @@
 
 import { useLang } from "./LangProvider";
 import Reveal from "./Reveal";
+import { ArrowUpRight } from "./Icons";
 
 export default function Footer() {
   const { t } = useLang();
+  const lines = [
+    { cmd: "mail", value: t.footer.email, url: `mailto:${t.footer.email}` },
+    ...t.footer.socials.map((s) => ({
+      cmd: "open",
+      value: s.url.replace("https://", "").replace("www.", ""),
+      url: s.url,
+    })),
+  ];
 
   return (
-    <footer id="contact" data-nav-theme="dark" className="scroll-mt-16 overflow-hidden bg-navy text-white">
-      <div className="mx-auto max-w-[1400px] px-6 pt-28 md:px-10 md:pt-36">
+    <footer id="contact" className="relative scroll-mt-14 overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[60vh] bg-[radial-gradient(70%_60%_at_50%_100%,rgba(158,197,255,0.11)_0%,transparent_70%)]" />
+      <div className="relative mx-auto max-w-[1440px] px-6 pt-28 md:px-10 md:pt-40">
         <Reveal>
-          <h2 className="max-w-3xl text-4xl font-medium leading-[1.08] tracking-tighter md:text-6xl">
+          <h2 className="max-w-3xl text-[clamp(2.5rem,6.5vw,5.5rem)] font-light leading-[1.02] tracking-[-0.03em] text-ink">
             {t.footer.heading}
           </h2>
-          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-fog">
-            {t.footer.note}
-          </p>
+          <p className="mt-7 max-w-[52ch] text-lg leading-relaxed text-dim">{t.footer.note}</p>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mt-12 flex flex-wrap items-center gap-4">
-            <a
-              href={`mailto:${t.footer.email}`}
-              className="rounded-full bg-white px-6 py-3 font-mono text-sm text-navy transition-transform duration-200 active:-translate-y-[1px] active:scale-[0.98] hover:bg-white/90"
-            >
-              {t.footer.email}
-            </a>
-            {t.footer.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.url}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/25 px-6 py-3 font-mono text-sm text-white transition-colors duration-200 hover:border-white/60"
-              >
-                {social.label} ↗
-              </a>
+        <Reveal delay={0.08}>
+          <ul className="mt-14 space-y-3 font-mono text-[15px] md:text-base">
+            {lines.map((line) => (
+              <li key={line.url}>
+                <a
+                  href={line.url}
+                  target={line.url.startsWith("mailto") ? undefined : "_blank"}
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 text-dim transition-colors duration-300 hover:text-accent"
+                >
+                  <span className="text-accent">$</span>
+                  <span>
+                    {line.cmd} <span className="text-ink transition-colors group-hover:text-accent">{line.value}</span>
+                  </span>
+                  <ArrowUpRight className="opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                </a>
+              </li>
             ))}
-          </div>
+            <li className="pt-2 text-accent" aria-hidden="true">
+              $ <span className="cursor-blink text-ink">▮</span>
+            </li>
+          </ul>
         </Reveal>
 
         <div
-          className="pointer-events-none mt-24 select-none whitespace-nowrap font-medium leading-[0.85] tracking-tighter text-navy-3"
-          style={{ fontSize: "clamp(40px, 10vw, 200px)" }}
+          className="mask-fade-b pointer-events-none mt-28 select-none overflow-hidden whitespace-nowrap font-light leading-[0.8] tracking-[-0.04em] text-void-3"
+          style={{ fontSize: "clamp(56px, 13vw, 240px)" }}
           aria-hidden="true"
         >
           FABISIAK.DEV
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-8">
-          <p className="font-mono text-xs text-fog">{t.footer.copyright}</p>
-          <p className="font-mono text-xs text-fog">Itatiba do Sul, RS, Brasil</p>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line py-7 font-mono text-[11px] uppercase tracking-[0.14em] text-dim">
+          <p>{t.footer.copyright}</p>
+          <p>Rio Grande do Sul · Brasil</p>
         </div>
       </div>
     </footer>

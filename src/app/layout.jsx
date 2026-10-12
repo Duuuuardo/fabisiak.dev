@@ -1,9 +1,10 @@
-import { Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Inter_Tight, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const grotesk = Space_Grotesk({
+const interTight = Inter_Tight({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  weight: ["300", "400", "500"],
+  variable: "--font-inter-tight",
   display: "swap",
 });
 
@@ -42,9 +43,13 @@ export const metadata = {
   authors: [{ name: "Eduardo Fabisiak" }],
 };
 
+export const viewport = {
+  themeColor: "#05070c",
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${grotesk.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${interTight.variable} ${plexMono.variable}`}>
       <body>{children}</body>
     </html>
   );

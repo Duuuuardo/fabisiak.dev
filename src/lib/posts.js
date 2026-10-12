@@ -11,12 +11,11 @@ function estimateReadingTime(markdown) {
   return `${Math.max(1, Math.round(words / 200))} min`;
 }
 
-function toMeta(slug, file) {
+function toMeta(file) {
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   return {
-    slug,
-    title: String(data.title ?? slug),
+    title: String(data.title ?? ""),
     date: String(data.date ?? ""),
     excerpt: String(data.excerpt ?? ""),
     tags: Array.isArray(data.tags) ? data.tags : [],
@@ -24,26 +23,41 @@ function toMeta(slug, file) {
   };
 }
 
+async function toPost(file) {
+  const raw = fs.readFileSync(file, "utf8");
+  const { content } = matter(raw);
+  const processed = await remark().use(html).process(content);
+  return { ...toMeta(file), html: processed.toString() };
+}
+
+function variantFile(slug, lang) {
+  return path.join(POSTS_DIR, `${slug}.${lang}.md`);
+}
+
 export function getPostSlugs() {
   if (!fs.existsSync(POSTS_DIR)) return [];
   return fs
     .readdirSync(POSTS_DIR)
-    .filter((f) => f.endsWith(".md"))
+    .filter((f) => f.endsWith(".md") && !f.endsWith(".en.md"))
     .map((f) => f.replace(/\.md$/, ""));
 }
 
 export function getAllPosts() {
   return getPostSlugs()
-    .map((slug) => toMeta(slug, path.join(POSTS_DIR, `${slug}.md`)))
+    .map((slug) => {
+      const meta = { slug, ...toMeta(path.join(POSTS_DIR, `${slug}.md`)) };
+      const enFile = variantFile(slug, "en");
+      if (fs.existsSync(enFile)) meta.en = toMeta(enFile);
+      return meta;
+    })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getPost(slug) {
   const file = path.join(POSTS_DIR, `${slug}.md`);
   if (!fs.existsSync(file)) return null;
-  const meta = toMeta(slug, file);
-  const raw = fs.readFileSync(file, "utf8");
-  const { content } = matter(raw);
-  const processed = await remark().use(html).process(content);
-  return { ...meta, html: processed.toString() };
+  const post = { slug, ...(await toPost(file)) };
+  const enFile = variantFile(slug, "en");
+  if (fs.existsSync(enFile)) post.en = await toPost(enFile);
+  return post;
 }
