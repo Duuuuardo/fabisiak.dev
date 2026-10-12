@@ -206,6 +206,10 @@ export const content = {
           items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "Firestore", "RabbitMQ", "Kafka", "BullMQ"],
         },
         {
+          name: "IA",
+          items: ["Claude Code", "Devin", "OpenAI", "Anthropic", "Gemini", "Ollama"],
+        },
+        {
           name: "Infra & DevOps",
           items: ["AWS", "Docker", "Linux (Arch)", "GitHub Actions", "Proxmox", "Nginx", "Apache", "Git", "CI/CD"],
         },
@@ -447,6 +451,10 @@ export const content = {
         {
           name: "Data & messaging",
           items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "Firestore", "RabbitMQ", "Kafka", "BullMQ"],
+        },
+        {
+          name: "AI",
+          items: ["Claude Code", "Devin", "OpenAI", "Anthropic", "Gemini", "Ollama"],
         },
         {
           name: "Infra & DevOps",
